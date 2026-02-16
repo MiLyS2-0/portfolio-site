@@ -1,0 +1,499 @@
+/* ================= ОБЩИЙ СБРОС И БАЗОВЫЕ СТИЛИ ================= */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #021522;
+    margin: 0;
+    height: 400vh;
+    background: linear-gradient(to bottom, #87ceeb, #cfdde8);
+    overflow-x: hidden;
+    transition: background 0.8s ease;
+}
+
+/* Ссылки без подчёркивания по умолчанию */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= ШАПКА (HEADER) ================= */
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+/* Подчёркивание активной ссылки */
+nav ul li a:hover {
+  color: #3498db;
+}
+
+/* ================= СЕКЦИЯ "HELLO" ================= */
+
+.hello {
+  padding: 4rem 5%;
+  background-color: #022047;
+  color: white;
+  text-align: center;
+}
+
+.hello h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hello span {
+  color: #b3f1fa;
+  font-weight: 600;
+}
+
+.hello p {
+  max-width: 700px;
+  margin: 1.5rem auto 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #cff3fd;
+  color: black;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #70dbf9;
+}
+
+/* ================= СЕКЦИИ "ABOUT", "SKILLS", "PROJECTS", "CONTACT" ================= */
+
+section {
+  padding: 4rem 5%;
+  background-color: #02152a;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0c95a9;
+  text-align: center;
+}
+
+/* ABOUT */
+.about p {
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #d7d8d7;
+;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill {
+  padding: 1.2rem;
+  background-color: #0382aa
+;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: #2c3e50;
+  transition: transform 0.2s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  background-color: #3498db;
+  color: white;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project {
+  padding: 2rem;
+  background-color: #34495e;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* CONTACT */
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color:
+#dde1e4
+
+;
+}
+
+#contactForm textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* ================= АДАПТИВНОСТЬ (МЕДИА‑ЗАПРОСЫ) ================= */
+
+/* Планшеты и небольшие экраны */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hello h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 600px) {
+  .hello,
+  section {
+    padding: 3rem 5%;
+  }
+
+  .hello h1 {
+    font-size: 1.8rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  #contactForm {
+    padding: 0 1rem;
+  }
+}
+
+
+.storm-overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.clouds {
+    position: fixed;
+    top: 0;
+    width: 15%;
+    height: 250px;
+    margin-top: 80px;
+    pointer-events: none;
+    z-index: 0; /* теперь они под текстом */
+}
+
+.cloud {
+    position: absolute;
+    width: 280px;
+    height: 100px;
+    background-color: rgb(255,255,255);
+    border-radius: 100px;
+    animation: float 8s ease-in-out infinite alternate;
+    transition: background-color 0.5s ease;
+}
+
+/* больше движения, но аккуратно */
+@keyframes float {
+    0% { transform: translateX(-60px); }
+    100% { transform: translateX(60px); }
+}
+
+
+/* кучерявость */
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 160px;
+    height: 160px;
+    top: -70px;
+    left: 40px;
+}
+
+.cloud::after {
+    width: 130px;
+    height: 130px;
+    top: -40px;
+    right: 40px;
+}
+
+.cloud1 { left: 20%; top: 80px; }
+.cloud2 { left: 60%; top: 120px; animation-duration: 9s; }
+
+/* вторые облака */
+.storm-over {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.cloudss {
+    position: fixed;
+    top: 0;
+    width: 35%;
+    height: 250px;
+    margin-top: 180px;
+    margin-left: 1120px;
+    pointer-events: none;
+    z-index: 0; /* теперь они под текстом */
+}
+
+.cloud {
+    position: absolute;
+    width: 280px;
+    height: 100px;
+    background-color: rgb(255,255,255);
+    border-radius: 100px;
+    animation: float 8s ease-in-out infinite alternate;
+    transition: background-color 0.5s ease;
+}
+
+/* больше движения, но аккуратно */
+@keyframes float {
+    0% { transform: translateX(-60px); }
+    100% { transform: translateX(60px); }
+}
+
+
+/* кучерявость */
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 160px;
+    height: 160px;
+    top: -70px;
+    left: 40px;
+}
+
+.cloud::after {
+    width: 130px;
+    height: 130px;
+    top: -40px;
+    right: 40px;
+}
+
+.cloud4 { left: 20%; top: 80px; }
+.cloud5 { left: 60%; top: 120px; animation-duration: 9s; }
+
+
+/* Грозовое состояние */
+.storm {
+  background-color: #444 !important;
+}
+
+/* rain */
+.rain-drop {
+  position: fixed;
+  top: -20px;
+  width: 1.5px;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(165, 214, 243, 0.8), rgba(30, 137, 245, 0.3));
+  border-radius: 50px;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 1;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) translateX(-20px);
+  }
+}
+
+
+/* birds */
+.bird {
+  position: fixed;
+  width: 40px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 5;
+  animation-timing-function: linear;
+}
+
+.bird::before,
+.bird::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid black;
+  border-radius: 50%;
+  top: 0;
+}
+
+.bird::before {
+  left: 0;
+  transform-origin: right center;
+  animation: flapLeft 0.6s infinite ease-in-out;
+}
+
+.bird::after {
+  right: 0;
+  transform-origin: left center;
+  animation: flapRight 0.6s infinite ease-in-out;
+}
+
+@keyframes flapLeft {
+  0%   { transform: rotate(20deg); }
+  50%  { transform: rotate(-25deg); }
+  100% { transform: rotate(20deg); }
+}
+
+@keyframes flapRight {
+  0%   { transform: rotate(-20deg); }
+  50%  { transform: rotate(25deg); }
+  100% { transform: rotate(-20deg); }
+}
+
+@keyframes flyRight {
+  from { transform: translateX(-10vw); }
+  to   { transform: translateX(110vw); }
+}
+
+@keyframes flyLeft {
+  from { transform: translateX(110vw) scaleX(-1); }
+  to   { transform: translateX(-10vw) scaleX(-1); }
+}
+
+/* цветы */
+.flower {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  animation: bloom 10s ease-in-out forwards;
+}
+
+.flower svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,0.25));
+}
+
+@keyframes bloom {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+
