@@ -498,17 +498,18 @@ footer {
 
 @media (max-width: 1000px) {
 
-  .clouds,
-  .cloudss {
+  .cloud,
+  .clouds {
     transform: scale(0.4);
     transform-origin: top center;
   }
 
 }
 
-.clouds,
-.cloudss {
+.cloud,
+.clouds {
   z-index: -1;
 }
+
 
 
