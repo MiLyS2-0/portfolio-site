@@ -498,23 +498,36 @@ footer {
 
 
 
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ ОБЛАК ===== */
+
 @media (max-width: 1000px) {
 
   .cloud {
-    transform: scale(0.4) !important;
-    transform-origin: top left;
+    width: 120px !important;
+    height: 45px !important;
   }
 
-  .cloud1 { left: 5% !important; }
-  .cloud2 { left: 40% !important; }
-  .cloud4 { left: 10% !important; }
-  .cloud5 { left: 55% !important; }
+  .cloud::before {
+    width: 60px !important;
+    height: 60px !important;
+    top: -25px !important;
+    left: 20px !important;
+  }
+
+  .cloud::after {
+    width: 50px !important;
+    height: 50px !important;
+    top: -15px !important;
+    right: 20px !important;
+  }
+
+  .cloudss {
+    margin-left: 0 !important;
+  }
 
 }
 
-.cloud {
-  z-index: -1 !important;
-}
+
 
 
 
