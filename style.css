@@ -275,10 +275,10 @@ footer {
 
 .cloud {
     position: absolute;
-    width: 280px;
-    height: 100px;
+  width: clamp(120px, 18vw, 280px);
+  height: clamp(50px, 6vw, 100px);
+  border-radius: 100px;
     background-color: rgb(255,255,255);
-    border-radius: 100px;
     animation: float 8s ease-in-out infinite alternate;
     transition: background-color 0.5s ease;
 }
@@ -300,15 +300,15 @@ footer {
 }
 
 .cloud::before {
-    width: 160px;
-    height: 160px;
+   width: clamp(80px, 10vw, 160px);
+  height: clamp(80px, 10vw, 160px);
     top: -70px;
     left: 40px;
 }
 
 .cloud::after {
-    width: 130px;
-    height: 130px;
+   width: clamp(70px, 8vw, 130px);
+  height: clamp(70px, 8vw, 130px);
     top: -40px;
     right: 40px;
 }
@@ -349,7 +349,7 @@ footer {
 
 /* больше движения, но аккуратно */
 @keyframes float {
-    0% { transform: translateX(-60px); }
+    0% { transform: translateX(-4vw); }
     100% { transform: translateX(60px); }
 }
 
@@ -409,8 +409,8 @@ footer {
 /* birds */
 .bird {
   position: fixed;
-  width: 40px;
-  height: 20px;
+ width: clamp(20px, 3vw, 40px);
+  height: clamp(10px, 2vw, 20px);
   pointer-events: none;
   z-index: 5;
   animation-timing-function: linear;
@@ -464,8 +464,8 @@ footer {
 /* цветы */
 .flower {
   position: fixed;
-  width: 120px;
-  height: 120px;
+width: clamp(60px, 10vw, 120px);
+  height: clamp(60px, 10vw, 120px);
   pointer-events: none;
   z-index: 5;
   opacity: 0;
@@ -500,32 +500,6 @@ footer {
 
 /* ===== МОБИЛЬНАЯ ВЕРСИЯ ОБЛАК ===== */
 
-@media (max-width: 1000px) {
-
-  .cloud {
-    width: 120px !important;
-    height: 45px !important;
-  }
-
-  .cloud::before {
-    width: 60px !important;
-    height: 60px !important;
-    top: -25px !important;
-    left: 20px !important;
-  }
-
-  .cloud::after {
-    width: 50px !important;
-    height: 50px !important;
-    top: -15px !important;
-    right: 20px !important;
-  }
-
-  .cloudss {
-    margin-left: 0 !important;
-  }
-
-}
 
 
 
