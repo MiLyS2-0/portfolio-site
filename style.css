@@ -496,20 +496,26 @@ footer {
   }
 
 
+
+
 @media (max-width: 1000px) {
 
-  .cloud,
-  .clouds {
-    transform: scale(0.4);
-    transform-origin: top center;
+  .cloud {
+    transform: scale(0.4) !important;
+    transform-origin: top left;
   }
 
+  .cloud1 { left: 5% !important; }
+  .cloud2 { left: 40% !important; }
+  .cloud4 { left: 10% !important; }
+  .cloud5 { left: 55% !important; }
+
 }
 
-.cloud,
-.clouds {
-  z-index: -1;
+.cloud {
+  z-index: -1 !important;
 }
+
 
 
 
