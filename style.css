@@ -266,10 +266,9 @@ footer {
 .clouds {
     position: fixed;
     top: 0;
-    width: 35%;
+   width: 15%;
     height: 250px;
-    margin-top: 180px;
-    margin-left: 1120px;
+    margin-top: 80px;
     pointer-events: none;
     z-index: 0; /* теперь они под текстом */
 }
@@ -301,15 +300,15 @@ footer {
 }
 
 .cloud::before {
-   width: clamp(80px, 10vw, 160px);
-  height: clamp(80px, 10vw, 160px);
+   width: 160px;
+    height: 160px;
     top: -70px;
     left: 40px;
 }
 
 .cloud::after {
-   width: clamp(70px, 8vw, 130px);
-  height: clamp(70px, 8vw, 130px);
+   width: 130px;
+    height: 130px;
     top: -40px;
     right: 40px;
 }
@@ -500,6 +499,7 @@ width: clamp(60px, 10vw, 120px);
 
 
 /* ===== МОБИЛЬНАЯ ВЕРСИЯ ОБЛАК ===== */
+
 
 
 
