@@ -265,19 +265,19 @@ footer {
 
 .clouds {
     position: fixed;
-    top: 80px;
-  width: 100%;
-  height: 200px;
+    top: 0;
+    width: 35%;
+    height: 250px;
+    margin-top: 180px;
+    margin-left: 1120px;
     pointer-events: none;
     z-index: 0; /* теперь они под текстом */
 }
 
 .cloud {
     position: absolute;
- width: 40vw;        /* вот тут vw можно */
-  max-width: 280px;   /* ограничение */
-  height: auto;
-  aspect-ratio: 3 / 1;
+ width: 280px;
+    height: 100px;
   border-radius: 100px;
     background-color: rgb(255,255,255);
     animation: float 8s ease-in-out infinite alternate;
