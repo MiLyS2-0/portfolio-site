@@ -410,8 +410,8 @@ footer {
 /* birds */
 .bird {
   position: fixed;
- width: 30px;
-  height: 15px;
+ width: 40px;
+  height: 20px;
   pointer-events: none;
   z-index: 5;
   animation-timing-function: linear;
@@ -500,6 +500,7 @@ width: clamp(60px, 10vw, 120px);
 
 
 /* ===== МОБИЛЬНАЯ ВЕРСИЯ ОБЛАК ===== */
+
 
 
 
